@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run dotnet test",
+            "command": "dotnet",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "args": [
+                "test",
+                "/p:CollectCoverage=true",
+                "/p:CoverletOutputFormat=lcov",
+                "/p:CoverletOutput=./lcov.info",
+                "/p:IncludeTestAssembly=true",
+            ],
+            "type": "process",
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "Generate coverage stats",
+            "command": "reportgenerator",
+            "type": "shell",
+            "args": [
+                "-reports:${workspaceFolder}/lcov.info",
+                "-targetdir:${workspaceFolder}/covstats"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}
