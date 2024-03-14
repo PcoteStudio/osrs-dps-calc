@@ -2,7 +2,7 @@ using Pcote.OsrsDpsCalc.Enums;
 
 namespace Pcote.OsrsDpsCalc.Entities;
 
-public class EquipmentPiece
+public class EquipmentPiece : EquipmentStats
 {
   public string Name { get; set; } = "";
   public int Id { get; set; }

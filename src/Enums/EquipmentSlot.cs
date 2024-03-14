@@ -2,6 +2,7 @@ namespace Pcote.OsrsDpsCalc.Enums;
 
 public enum EquipmentSlot
 {
+  None,
   Head,
   Cape,
   Neck,

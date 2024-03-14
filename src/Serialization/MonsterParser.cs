@@ -22,7 +22,7 @@ public static class MonsterParser
     return Parse(File.ReadAllText(filePath));
   }
 
-  public static Monster MapMonsterResponseToMonster(MonsterResponse monsterResponse)
+  private static Monster MapMonsterResponseToMonster(MonsterResponse monsterResponse)
   {
     Monster monster = new Monster()
     {
@@ -43,7 +43,7 @@ public static class MonsterParser
     return monster;
   }
 
-  public static CombatSkills MapCombatSkillsResponseToCombatSkills(int[] combatSkillsResponse)
+  private static CombatSkills MapCombatSkillsResponseToCombatSkills(int[] combatSkillsResponse)
   {
     return new CombatSkills()
     {
@@ -56,7 +56,7 @@ public static class MonsterParser
     };
   }
 
-  public static MonsterOffensiveStats MapOffensiveResponseToOffensiveStats(int[] defensiveResponse)
+  private static MonsterOffensiveStats MapOffensiveResponseToOffensiveStats(int[] defensiveResponse)
   {
     return new MonsterOffensiveStats()
     {
@@ -69,7 +69,7 @@ public static class MonsterParser
     };
   }
 
-  public static OffensiveDefensiveStats MapDefensiveResponseToDefensiveStats(int[] defensiveResponse)
+  private static OffensiveDefensiveStats MapDefensiveResponseToDefensiveStats(int[] defensiveResponse)
   {
     return new OffensiveDefensiveStats()
     {
@@ -81,7 +81,7 @@ public static class MonsterParser
     };
   }
 
-  public static CombatStyleType[] MapCombatStylesResponseToCombatStyles(string[] combatStylesResponse)
+  private static CombatStyleType[] MapCombatStylesResponseToCombatStyles(string[] combatStylesResponse)
   {
     List<CombatStyleType> styles = new List<CombatStyleType>();
     foreach (string s in combatStylesResponse)
@@ -103,7 +103,7 @@ public static class MonsterParser
     return [.. styles];
   }
 
-  public static MonsterAttribute[] MapAttributesResponseToMonsterAttributes(string[] attributeResponse)
+  private static MonsterAttribute[] MapAttributesResponseToMonsterAttributes(string[] attributeResponse)
   {
     List<MonsterAttribute> attributes = new List<MonsterAttribute>();
     foreach (string a in attributeResponse)

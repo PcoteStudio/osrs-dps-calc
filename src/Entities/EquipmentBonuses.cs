@@ -1,6 +1,6 @@
 namespace Pcote.OsrsDpsCalc.Entities;
 
-public class PlayerBonuses
+public class EquipmentBonuses
 {
   public int Strength { get; set; }
   public int MagicStrength { get; set; }

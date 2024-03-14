@@ -22,7 +22,7 @@ public static class SpellParser
     return Parse(File.ReadAllText(filePath));
   }
 
-  public static Spell MapSpellResponseToSpell(SpellResponse spellResponse)
+  private static Spell MapSpellResponseToSpell(SpellResponse spellResponse)
   {
     Spell spell = new Spell()
     {
