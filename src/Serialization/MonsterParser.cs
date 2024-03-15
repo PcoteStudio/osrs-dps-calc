@@ -51,7 +51,7 @@ public static class MonsterParser
       Defence = combatSkillsResponse.ElementAtOrDefault(1),
       Hitpoints = combatSkillsResponse.ElementAtOrDefault(2),
       Magic = combatSkillsResponse.ElementAtOrDefault(3),
-      Range = combatSkillsResponse.ElementAtOrDefault(4),
+      Ranged = combatSkillsResponse.ElementAtOrDefault(4),
       Strength = combatSkillsResponse.ElementAtOrDefault(5),
     };
   }

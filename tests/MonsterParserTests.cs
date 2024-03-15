@@ -50,7 +50,7 @@ public class MonsterParserTests
       Size = 3,
       Styles = [CombatStyleType.Magic],
       MaxHit = "31",
-      Skills = new CombatSkills() { Attack = 1, Defence = 180, Hitpoints = 250, Magic = 300, Range = 1, Strength = 1 },
+      Skills = new CombatSkills() { Attack = 1, Defence = 180, Hitpoints = 250, Magic = 300, Ranged = 1, Strength = 1 },
       Offensive = new MonsterOffensiveStats(),
       Defensive = new OffensiveDefensiveStats() { Crush = 40, Magic = 0, Ranged = 30, Slash = 40, Stab = 40 },
       Attributes = [MonsterAttribute.Spectral, MonsterAttribute.Undead]

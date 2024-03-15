@@ -1,0 +1,174 @@
+[
+  {
+    "id": 26340,
+    "name": "Ancient brew",
+    "image": "Ancient brew.png",
+    "skillBaseBuffs": {
+      "magic": 3,
+      "attack": -2,
+      "strength": -2,
+      "defence": -2
+    },
+    "skillMultipliers": {
+      "magic": 1.05,
+      "attack": 0.9,
+      "strength": -0.9,
+      "defence": -0.9
+    }
+  },
+  {
+    "id": 2428,
+    "name": "Attack potion",
+    "image": "Attack potion.png",
+    "skillBaseBuffs": { "attack": 3 },
+    "skillMultipliers": { "attack": 1.1 }
+  },
+  {
+    "id": 27629,
+    "name": "Forgotten brew",
+    "image": "Forgotten brew.png",
+    "skillBaseBuffs": {
+      "magic": 3,
+      "attack": -2,
+      "strength": -2,
+      "defence": -2
+    },
+    "skillMultipliers": {
+      "magic": 1.08,
+      "attack": 0.9,
+      "strength": -0.9,
+      "defence": -0.9
+    }
+  },
+  {
+    "id": 20724,
+    "name": "Imbued heart",
+    "image": "Imbued heart.png",
+    "skillBaseBuffs": { "magic": 1 },
+    "skillMultipliers": { "magic": 1.1 }
+  },
+  {
+    "id": 3040,
+    "name": "Magic potion",
+    "image": "Magic potion.png",
+    "skillBaseBuffs": { "magic": 4 },
+    "skillMultipliers": {}
+  },
+  {
+    "id": 11730,
+    "name": "Overload",
+    "image": "Overload.png",
+    "skillBaseBuffs": {
+      "attack": 5,
+      "strength": 5,
+      "defence": 5,
+      "ranged": 5,
+      "magic": 5
+    },
+    "skillMultipliers": {
+      "attack": 1.13,
+      "strength": 1.13,
+      "defence": 1.13,
+      "ranged": 1.13,
+      "magic": 1.13
+    }
+  },
+  {
+    "id": 20996,
+    "name": "Overload (+)",
+    "image": "Overload (+).png",
+    "skillBaseBuffs": {
+      "attack": 6,
+      "strength": 6,
+      "defence": 6,
+      "ranged": 6,
+      "magic": 6
+    },
+    "skillMultipliers": {
+      "attack": 1.16,
+      "strength": 1.16,
+      "defence": 1.16,
+      "ranged": 1.16,
+      "magic": 1.16
+    }
+  },
+  {
+    "id": 2444,
+    "name": "Ranging potion",
+    "image": "Ranging potion.png",
+    "skillBaseBuffs": { "ranged": 4 },
+    "skillMultipliers": { "ranged": 1.1 }
+  },
+  {
+    "id": 27641,
+    "name": "Saturated heart",
+    "image": "Saturated heart.png",
+    "skillBaseBuffs": { "magic": 4 },
+    "skillMultipliers": { "magic": 1.1 }
+  },
+  {
+    "id": 0,
+    "name": "Smelling salts",
+    "image": "Smelling salts.png",
+    "skillBaseBuffs": {
+      "attack": 11,
+      "strength": 11,
+      "defence": 11,
+      "ranged": 11,
+      "magic": 11
+    },
+    "skillMultipliers": {
+      "attack": 1.16,
+      "strength": 1.16,
+      "defence": 1.16,
+      "ranged": 1.16,
+      "magic": 1.16
+    }
+  },
+  {
+    "id": 113,
+    "name": "Strength potion",
+    "image": "Strength potion.png",
+    "skillBaseBuffs": { "strength": 3 },
+    "skillMultipliers": { "strength": 1.1 }
+  },
+  {
+    "id": 2436,
+    "name": "Super attack",
+    "image": "Super attack.png",
+    "skillBaseBuffs": { "attack": 5 },
+    "skillMultipliers": { "attack": 1.15 }
+  },
+  {
+    "id": 2440,
+    "name": "Super strength",
+    "image": "Super strength.png",
+    "skillBaseBuffs": { "strength": 5 },
+    "skillMultipliers": { "strength": 1.15 }
+  },
+  {
+    "id": 12695,
+    "name": "Super combat",
+    "image": "Super combat.png",
+    "skillBaseBuffs": { "attack": 5, "strength": 5, "defence": 5 },
+    "skillMultipliers": {
+      "attack": 1.15,
+      "strength": 1.15,
+      "defence": 1.15
+    }
+  },
+  {
+    "id": 2432,
+    "name": "Defence potion",
+    "image": "Defence potion.png",
+    "skillBaseBuffs": { "defence": 3 },
+    "skillMultipliers": { "defence": 1.1 }
+  },
+  {
+    "id": 2442,
+    "name": "Super defence",
+    "image": "Super defence.png",
+    "skillBaseBuffs": { "defence": 5 },
+    "skillMultipliers": { "defence": 1.15 }
+  }
+]

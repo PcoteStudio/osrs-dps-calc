@@ -1,5 +1,3 @@
-using Pcote.OsrsDpsCalc.Enums;
-
 namespace Pcote.OsrsDpsCalc.Entities;
 
 public class PlayerBuffs
