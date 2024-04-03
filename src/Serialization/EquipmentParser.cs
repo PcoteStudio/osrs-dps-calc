@@ -9,16 +9,16 @@ namespace Pcote.OsrsDpsCalc.Serialization;
 public static class EquipmentParser
 {
   private static readonly JsonSerializerOptions _options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true, Converters = { new ForgivingStringConverter() } };
-  public static EquipmentPiece[] Parse(string json)
+  public static List<EquipmentPiece> Parse(string json)
   {
-    EquipmentResponse[] response = JsonSerializer.Deserialize<EquipmentResponse[]>(json, _options) ?? [];
+    List<EquipmentResponse> response = JsonSerializer.Deserialize<List<EquipmentResponse>>(json, _options) ?? [];
     List<EquipmentPiece> equipments = [];
     foreach (EquipmentResponse m in response)
       equipments.Add(MapEquipmentResponseToEquipmentPiece(m));
-    return [.. equipments];
+    return equipments;
   }
 
-  public static EquipmentPiece[] ParseFile(string filePath)
+  public static List<EquipmentPiece> ParseFile(string filePath)
   {
     return Parse(File.ReadAllText(filePath));
   }

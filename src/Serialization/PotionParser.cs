@@ -7,16 +7,16 @@ namespace Pcote.OsrsDpsCalc.Serialization;
 public static class PotionParser
 {
   private static readonly JsonSerializerOptions _options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true, Converters = { new ForgivingStringConverter() } };
-  public static Potion[] Parse(string json)
+  public static List<Potion> Parse(string json)
   {
-    PotionResponse[] response = JsonSerializer.Deserialize<PotionResponse[]>(json, _options) ?? [];
+    List<PotionResponse> response = JsonSerializer.Deserialize<List<PotionResponse>>(json, _options) ?? [];
     List<Potion> potions = [];
-    foreach (PotionResponse m in response)
-      potions.Add(MapPotionResponseToPotion(m));
+    foreach (PotionResponse p in response)
+      potions.Add(MapPotionResponseToPotion(p));
     return [.. potions];
   }
 
-  public static Potion[] ParseFile(string filePath)
+  public static List<Potion> ParseFile(string filePath)
   {
     return Parse(File.ReadAllText(filePath));
   }
@@ -53,14 +53,14 @@ public static class PotionParser
   {
     return new PlayerCombatSkillsMultipliers()
     {
-      Attack = skillsMultipliersResponse?.Attack ?? 0,
-      Defence = skillsMultipliersResponse?.Defence ?? 0,
-      Hitpoints = skillsMultipliersResponse?.Hitpoints ?? 0,
-      Magic = skillsMultipliersResponse?.Magic ?? 0,
-      Mining = skillsMultipliersResponse?.Mining ?? 0,
-      Prayer = skillsMultipliersResponse?.Prayer ?? 0,
-      Ranged = skillsMultipliersResponse?.Ranged ?? 0,
-      Strength = skillsMultipliersResponse?.Strength ?? 0,
+      Attack = skillsMultipliersResponse?.Attack ?? 1,
+      Defence = skillsMultipliersResponse?.Defence ?? 1,
+      Hitpoints = skillsMultipliersResponse?.Hitpoints ?? 1,
+      Magic = skillsMultipliersResponse?.Magic ?? 1,
+      Mining = skillsMultipliersResponse?.Mining ?? 1,
+      Prayer = skillsMultipliersResponse?.Prayer ?? 1,
+      Ranged = skillsMultipliersResponse?.Ranged ?? 1,
+      Strength = skillsMultipliersResponse?.Strength ?? 1,
     };
   }
 }

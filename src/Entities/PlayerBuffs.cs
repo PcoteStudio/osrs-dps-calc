@@ -2,7 +2,7 @@ namespace Pcote.OsrsDpsCalc.Entities;
 
 public class PlayerBuffs
 {
-  public Potion[] Potions { get; set; } = [];
+  public List<Potion> Potions { get; set; } = [];
   public bool OnSlayerTask { get; set; }
   public bool InWilderness { get; set; }
   public bool ForinthrySurge { get; set; }

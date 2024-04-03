@@ -8,16 +8,16 @@ namespace Pcote.OsrsDpsCalc.Serialization;
 public static class SpellParser
 {
   private static readonly JsonSerializerOptions _options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true, Converters = { new ForgivingStringConverter() } };
-  public static Spell[] Parse(string json)
+  public static List<Spell> Parse(string json)
   {
-    SpellResponse[] response = JsonSerializer.Deserialize<SpellResponse[]>(json, _options) ?? [];
+    List<SpellResponse> response = JsonSerializer.Deserialize<List<SpellResponse>>(json, _options) ?? [];
     List<Spell> spells = [];
     foreach (SpellResponse m in response)
       spells.Add(MapSpellResponseToSpell(m));
     return [.. spells];
   }
 
-  public static Spell[] ParseFile(string filePath)
+  public static List<Spell> ParseFile(string filePath)
   {
     return Parse(File.ReadAllText(filePath));
   }

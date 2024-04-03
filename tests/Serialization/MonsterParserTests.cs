@@ -2,7 +2,7 @@ using Pcote.OsrsDpsCalc.Entities;
 using Pcote.OsrsDpsCalc.Enums;
 using Pcote.OsrsDpsCalc.Serialization;
 
-namespace Pcote.OsrsDpsCalc.Tests;
+namespace Pcote.OsrsDpsCalc.Tests.Serialization;
 
 public class MonsterParserTests
 {
@@ -10,8 +10,8 @@ public class MonsterParserTests
   public void Test_ParseFile_GameData()
   {
     string filePath = Directory.GetCurrentDirectory() + "\\..\\..\\..\\data\\monsters.json";
-    Monster[] monsters = MonsterParser.ParseFile(filePath);
-    Assert.True(monsters.Length >= 2250);
+    List<Monster> monsters = MonsterParser.ParseFile(filePath);
+    Assert.True(monsters.Count >= 2250);
   }
 
   [Fact]
@@ -26,9 +26,9 @@ public class MonsterParserTests
   public void Test_Parse_MissingAttributes()
   {
     string json = "[{\"id\":7402}]";
-    Monster[] monsters = MonsterParser.Parse(json);
+    List<Monster> monsters = MonsterParser.Parse(json);
 
-    Monster[] expectedMonsters = [new Monster() { Id = 7402 }];
+    List<Monster> expectedMonsters = [new Monster() { Id = 7402 }];
     Assert.Equivalent(expectedMonsters, monsters);
   }
 
@@ -38,9 +38,9 @@ public class MonsterParserTests
     string json = "[{\"id\":7402,\"name\":\"Abhorrent spectre\",\"version\":\"\",\"image\":\"Abhorrent spectre.png\",\"level\":253,"
     + "\"speed\":4,\"style\":[\"Magic\"],\"size\":3,\"max_hit\":\"31\",\"skills\":[1,180,250,300,1,1],\"offensive\":[0,0,0,0,0,0]," +
     "\"defensive\":[40,0,30,40,40],\"attributes\":[\"spectral\",\"undead\"]}]";
-    Monster[] monsters = MonsterParser.Parse(json);
+    List<Monster> monsters = MonsterParser.Parse(json);
 
-    Monster[] expectedMonsters = [new Monster() {
+    List<Monster> expectedMonsters = [new Monster() {
       Id = 7402,
       Name = "Abhorrent spectre",
       Version = "",

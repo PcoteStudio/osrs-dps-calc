@@ -8,16 +8,16 @@ namespace Pcote.OsrsDpsCalc.Serialization;
 public static class MonsterParser
 {
   private static readonly JsonSerializerOptions _options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true, Converters = { new ForgivingStringConverter() } };
-  public static Monster[] Parse(string json)
+  public static List<Monster> Parse(string json)
   {
-    MonsterResponse[] response = JsonSerializer.Deserialize<MonsterResponse[]>(json, _options) ?? [];
+    List<MonsterResponse> response = JsonSerializer.Deserialize<List<MonsterResponse>>(json, _options) ?? [];
     List<Monster> monsters = [];
     foreach (MonsterResponse m in response)
       monsters.Add(MapMonsterResponseToMonster(m));
     return [.. monsters];
   }
 
-  public static Monster[] ParseFile(string filePath)
+  public static List<Monster> ParseFile(string filePath)
   {
     return Parse(File.ReadAllText(filePath));
   }

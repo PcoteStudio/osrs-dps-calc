@@ -1,5 +1,3 @@
-using Pcote.OsrsDpsCalc.Enums;
-
 namespace Pcote.OsrsDpsCalc.Entities;
 
 public class Player : EquipmentStats
@@ -9,7 +7,7 @@ public class Player : EquipmentStats
   public PlayerCombatSkills Skills { get; set; } = new PlayerCombatSkills();
   public PlayerCombatSkills Boosts { get; set; } = new PlayerCombatSkills();
   public PlayerEquipment Equipment { get; set; } = new PlayerEquipment();
-  public Prayer[] Prayers { get; set; } = [];
+  public PlayerPrayers Prayers { get; set; } = new PlayerPrayers();
   public PlayerBuffs Buffs { get; set; } = new PlayerBuffs();
   public Spell? Spell { get; set; }
 }

@@ -84,9 +84,9 @@ public class PlayerEquipment : EquipmentStats
 
   private EquipmentPiece? SwapPiece(EquipmentPiece? oldValue, EquipmentPiece? newValue)
   {
-    // TODO Remove set effect
     if (oldValue != null)
     {
+      // TODO Remove set effect
       _pieces.Remove(oldValue);
       Bonuses -= oldValue.Bonuses;
       Offensive -= oldValue.Offensive;
@@ -95,11 +95,11 @@ public class PlayerEquipment : EquipmentStats
     if (newValue != null)
     {
       _pieces.Add(newValue);
+      // TODO Generate set effect
       Bonuses += newValue.Bonuses;
       Offensive += newValue.Offensive;
       Defensive += newValue.Defensive;
     }
-    // TODO Apply set effect
     return newValue;
   }
 }

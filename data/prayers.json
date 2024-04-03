@@ -1,0 +1,154 @@
+[
+  {
+    "name": "Burst of Strength",
+    "image": "Burst of Strength.png",
+    "combatStyle": "Melee",
+    "accuracyMultiplier": 1,
+    "strengthMultiplier": 1.05,
+    "defenceMultiplier": 1
+  },
+  {
+    "name": "Clarity of Thought",
+    "image": "Clarity of Thought.png",
+    "combatStyle": "Melee",
+    "accuracyMultiplier": 1.05,
+    "strengthMultiplier": 1,
+    "defenceMultiplier": 1
+  },
+  {
+    "name": "Sharp Eye",
+    "image": "Sharp Eye.png",
+    "combatStyle": "Ranged",
+    "accuracyMultiplier": 1.05,
+    "strengthMultiplier": 1.05,
+    "defenceMultiplier": 1
+  },
+  {
+    "name": "Mystic Will",
+    "image": "Mystic Will.png",
+    "combatStyle": "Magic",
+    "accuracyMultiplier": 1.05,
+    "strengthMultiplier": 1,
+    "defenceMultiplier": 1.05
+  },
+  {
+    "name": "Superhuman Strength",
+    "image": "Superhuman Strength.png",
+    "combatStyle": "Melee",
+    "accuracyMultiplier": 1,
+    "strengthMultiplier": 1.1,
+    "defenceMultiplier": 1
+  },
+  {
+    "name": "Improved Reflexes",
+    "image": "Improved Reflexes.png",
+    "combatStyle": "Melee",
+    "accuracyMultiplier": 1.1,
+    "strengthMultiplier": 1,
+    "defenceMultiplier": 1
+  },
+  {
+    "name": "Hawk Eye",
+    "image": "Hawk Eye.png",
+    "combatStyle": "Ranged",
+    "accuracyMultiplier": 1.1,
+    "strengthMultiplier": 1.1,
+    "defenceMultiplier": 1
+  },
+  {
+    "name": "Mystic Lore",
+    "image": "Mystic Lore.png",
+    "combatStyle": "Magic",
+    "accuracyMultiplier": 1.1,
+    "strengthMultiplier": 1,
+    "defenceMultiplier": 1.1
+  },
+  {
+    "name": "Ultimate Strength",
+    "image": "Ultimate Strength.png",
+    "combatStyle": "Melee",
+    "accuracyMultiplier": 1,
+    "strengthMultiplier": 1.15,
+    "defenceMultiplier": 1
+  },
+  {
+    "name": "Incredible Reflexes",
+    "image": "Incredible Reflexes.png",
+    "combatStyle": "Melee",
+    "accuracyMultiplier": 1.15,
+    "strengthMultiplier": 1,
+    "defenceMultiplier": 1
+  },
+  {
+    "name": "Eagle Eye",
+    "image": "Eagle Eye.png",
+    "combatStyle": "Ranged",
+    "accuracyMultiplier": 1.15,
+    "strengthMultiplier": 1.15,
+    "defenceMultiplier": 1
+  },
+  {
+    "name": "Mystic Might",
+    "image": "Mystic Might.png",
+    "combatStyle": "Magic",
+    "accuracyMultiplier": 1.15,
+    "strengthMultiplier": 1,
+    "defenceMultiplier": 1.15
+  },
+  {
+    "name": "Chivalry",
+    "image": "Chivalry.png",
+    "combatStyle": "Melee",
+    "accuracyMultiplier": 1.15,
+    "strengthMultiplier": 1.18,
+    "defenceMultiplier": 1.2
+  },
+  {
+    "name": "Piety",
+    "image": "Piety.png",
+    "combatStyle": "Melee",
+    "accuracyMultiplier": 1.2,
+    "strengthMultiplier": 1.23,
+    "defenceMultiplier": 1.2
+  },
+  {
+    "name": "Rigour",
+    "image": "Rigour.png",
+    "combatStyle": "Ranged",
+    "accuracyMultiplier": 1.2,
+    "strengthMultiplier": 1.23,
+    "defenceMultiplier": 1.25
+  },
+  {
+    "name": "Augury",
+    "image": "Augury.png",
+    "combatStyle": "Magic",
+    "accuracyMultiplier": 1.25,
+    "strengthMultiplier": 1,
+    "defenceMultiplier": 1.25
+  },
+  {
+    "name": "Thick Skin",
+    "image": "Thick Skin.png",
+    "combatStyle": "None",
+    "accuracyMultiplier": 1,
+    "strengthMultiplier": 1,
+    "defenceMultiplier": 1.05
+  },
+  {
+    "name": "Rock Skin",
+    "image": "Rock Skin.png",
+    "combatStyle": "None",
+    "accuracyMultiplier": 1,
+    "strengthMultiplier": 1,
+    "defenceMultiplier": 1.1
+  },
+  {
+    "name": "Steel Skin",
+    "image": "Steel Skin.png",
+    "combatStyle": "None",
+    "accuracyMultiplier": 1,
+    "strengthMultiplier": 1,
+    "defenceMultiplier": 1.15
+  }
+]

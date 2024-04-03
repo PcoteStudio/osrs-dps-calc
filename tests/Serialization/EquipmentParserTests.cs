@@ -2,7 +2,7 @@ using Pcote.OsrsDpsCalc.Entities;
 using Pcote.OsrsDpsCalc.Enums;
 using Pcote.OsrsDpsCalc.Serialization;
 
-namespace Pcote.OsrsDpsCalc.Tests;
+namespace Pcote.OsrsDpsCalc.Tests.Serialization;
 
 public class EquipmentParserTests
 {
@@ -10,8 +10,8 @@ public class EquipmentParserTests
   public void Test_ParseFile_GameData()
   {
     string filePath = Directory.GetCurrentDirectory() + "\\..\\..\\..\\data\\equipment.json";
-    EquipmentPiece[] equipments = EquipmentParser.ParseFile(filePath);
-    Assert.True(equipments.Length >= 4560);
+    List<EquipmentPiece> equipments = EquipmentParser.ParseFile(filePath);
+    Assert.True(equipments.Count >= 4560);
   }
 
   [Fact]
@@ -26,9 +26,9 @@ public class EquipmentParserTests
   public void Test_Parse_MissingAttributes()
   {
     string json = "[{\"id\":1279}]";
-    EquipmentPiece[] equipments = EquipmentParser.Parse(json);
+    List<EquipmentPiece> equipments = EquipmentParser.Parse(json);
 
-    EquipmentPiece[] expectedEquipments = [new EquipmentPiece() { Id = 1279 }];
+    List<EquipmentPiece> expectedEquipments = [new EquipmentPiece() { Id = 1279 }];
     Assert.Equivalent(expectedEquipments, equipments);
   }
 
@@ -38,9 +38,9 @@ public class EquipmentParserTests
     string json = "[{\"name\":\"Iron sword\",\"id\":1279,\"version\":\"\",\"slot\":\"weapon\",\"image\":\"Iron sword.png\",\"speed\":4,"
     + "\"category\":\"Stab Sword\",\"bonuses\":{\"str\":7,\"ranged_str\":0,\"magic_str\":0,\"prayer\":0},\"offensive\":{\"stab\":6,\"slash\":4,"
     + "\"crush\":-2,\"magic\":0,\"ranged\":0},\"defensive\":{\"stab\":0,\"slash\":2,\"crush\":1,\"magic\":0,\"ranged\":0},\"isTwoHanded\":false}]";
-    EquipmentPiece[] equipments = EquipmentParser.Parse(json);
+    List<EquipmentPiece> equipments = EquipmentParser.Parse(json);
 
-    EquipmentPiece[] expectedEquipments = [new EquipmentPiece() {
+    List<EquipmentPiece> expectedEquipments = [new EquipmentPiece() {
       Name = "Iron sword",
       Id= 1279,
       Version = "",
