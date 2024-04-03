@@ -9,7 +9,7 @@ public class PlayerPrayersTests
   readonly PlayerPrayers playerPrayers = new();
 
   [Fact]
-  public void Test_ParseFile_ActivatePrayer()
+  public void Test_PlayerPrayers_ActivatePrayer()
   {
     TestSetup.Initialize();
     Prayer prayer = sandbox.Prayers.First();
@@ -19,7 +19,7 @@ public class PlayerPrayersTests
   }
 
   [Fact]
-  public void Test_ParseFile_ActivateCompatiblePrayers()
+  public void Test_PlayerPrayers_ActivateCompatiblePrayers()
   {
     TestSetup.Initialize();
     Prayer superStrength = sandbox.Prayers.First(p => p.Name == "Superhuman Strength");
@@ -36,7 +36,7 @@ public class PlayerPrayersTests
   }
 
   [Fact]
-  public void Test_ParseFile_ActivateIncompatiblePrayers()
+  public void Test_PlayerPrayers_ActivateIncompatiblePrayers()
   {
     TestSetup.Initialize();
     Prayer piety = sandbox.Prayers.First(p => p.Name == "Piety");
